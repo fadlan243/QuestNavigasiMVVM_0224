@@ -60,6 +60,27 @@ fun FormIsian(
                 onValueChange = {}
             )
 
+            // Garis Pembatas
+            HorizontalDivider(
+                modifier = Modifier
+                    .padding(all = 20.dp)
+                    .width(250.dp),
+                thickness = Thickness,
+                color = Color.Red
+            )
+
+            // Radio Button Jenis Kelamin
+            Row {
+                jenisK.forEach { item ->
+                    Row(verticalAlignment = Alignment.CenterVertically) {
+                        RadioButton(
+                            selected = false,
+                            onClick = { item }
+                        )
+                        Text(text = item)
+                    }
+                }
+            }
 
         }
     }
