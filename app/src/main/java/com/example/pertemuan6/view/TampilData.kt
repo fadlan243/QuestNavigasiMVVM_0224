@@ -81,3 +81,6 @@ fun TampilData(
             ) {
                 Text(text = stringResource(id = R.string.back))
             }
+        }
+    }
+}
