@@ -14,3 +14,13 @@ enum class Navigasi {
     FormulirSaya,
     Detail
 }
+
+@Composable
+fun DataApp(
+    navController: NavHostController = rememberNavController()
+) {
+    val konteks = LocalContext.current
+
+    Scaffold {
+}
+
