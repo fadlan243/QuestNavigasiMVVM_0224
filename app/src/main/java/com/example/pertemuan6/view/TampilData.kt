@@ -72,5 +72,12 @@ fun TampilData(
                 Spacer(modifier = Modifier.height(10.dp))
             }
 
-    }
-}
+            // Tombol Back di bagian bawah
+            Button(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(all = dimensionResource(id = R.dimen.padding_medium)),
+                onClick = onBackBtnClick
+            ) {
+                Text(text = stringResource(id = R.string.back))
+            }
