@@ -21,6 +21,19 @@ fun DataApp(
 ) {
     val konteks = LocalContext.current
 
-    Scaffold {
+    Scaffold { isiRuang ->
+        NavHost(
+            navController = navController,
+            startDestination = Navigasi.FormulirSaya.name,
+            modifier = Modifier.padding(paddingValues = isiRuang)
+        ) {
+            composable(route = Navigasi.FormulirSaya.name) {
+                FormIsian(
+                    OnSubmitBtnClick = {
+                        navController.navigate(route = Navigasi.Detail.name)
+                    }
+                )
+            }
+
 }
 
